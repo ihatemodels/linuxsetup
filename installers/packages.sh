@@ -12,9 +12,12 @@ function install {
   fi
 }
 
+install vim-gui-common
+install vim-runtime
 install vim
 install keepass2
 install keepass2-plugin-keepasshttp
 install nmap
+install highlight-common
 install highlight 
 

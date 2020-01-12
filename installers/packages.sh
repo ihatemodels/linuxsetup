@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 function install {
   which $1 &> /dev/null
 
@@ -12,12 +11,10 @@ function install {
   fi
 }
 
-install vim-gui-common
-install vim-runtime
-install vim
-install keepass2
-install keepass2-plugin-keepasshttp
-install nmap
-install highlight-common
-install highlight 
+sudo apt update
+sudo apt remove vim 
 
+while IFS= read -r line
+do
+  install "$line"
+done < "packages.lst"

@@ -1,4 +1,3 @@
-vim
 vim-runtime
 vim-gui-common
 keepass2
@@ -6,3 +5,4 @@ keepass2-plugin-keepasshtpp
 nmap
 highlight-common
 highlight
+vim

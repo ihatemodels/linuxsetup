@@ -18,3 +18,11 @@ while IFS= read -r line
 do
   install "$line"
 done < "packages.lst"
+
+
+while IFS= read -r line
+do
+  apt purge -y  "$line"
+done < "junk.lst"
+
+apt autoremove

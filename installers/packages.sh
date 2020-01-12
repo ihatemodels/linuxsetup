@@ -12,17 +12,16 @@ function install {
 }
 
 apt update
-apt remove vim 
-
-while IFS= read -r line
-do
-  install "$line"
-done < "packages.lst"
-
-
+apt purge -y vim
+ 
 while IFS= read -r line
 do
   apt purge -y  "$line"
 done < "junk.lst"
 
 apt autoremove
+
+while IFS= read -r line
+do
+  install "$line"
+done < "packages.lst"

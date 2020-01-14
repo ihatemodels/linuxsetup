@@ -1,7 +1,7 @@
 vim-runtime
 vim-gui-common
 keepass2
-keepass2-plugin-keepasshtpp
+keepass2-plugin-keepasshttp
 nmap
 highlight-common
 highlight

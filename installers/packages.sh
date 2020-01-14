@@ -19,7 +19,7 @@ do
   apt purge -y  "$line"
 done < "junk.lst"
 
-apt autoremove
+apt autoremove -y
 
 while IFS= read -r line
 do

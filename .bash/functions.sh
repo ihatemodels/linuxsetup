@@ -3,7 +3,7 @@
 ############################
 
 function show () {
-	    apt search $1
+    apt search $1
 
 }
 
@@ -17,13 +17,20 @@ function upgrade () {
 }
 
 
-function pshow() {
-        if [ ! -z $1 ] ; then
-                ps aux | grep $1 
-        else
-                echo "!! Need name to grep for"
-        fi
+function pshow() {    
+    if [ ! -z $1 ] ; then
+            ps aux | grep $1 
+    else
+            echo "!! Need name to grep for"
+    fi
 }
+
+function gitit() {
+    git add .
+    git commit -a -m "$1"
+    git push
+}
+
 
 function extract () {
         if [ -f $1 ] ; then

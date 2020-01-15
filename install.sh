@@ -1,10 +1,18 @@
 #!/bin/bash
 
 function vscode {
-    echo "Installing vscode..."
+    printf "\n[*] INSTALLING VSCODE..."
 	curl -L -o vscode.deb https://go.microsoft.com/fwlink/?LinkID=760868 > /dev/null 2>&1
-	dpkg -i vscode.deb
+	sudo dpkg -i vscode.deb
     echo "Done."
+
+	which code &> /dev/null
+
+	if [ $? -ne 0 ]; then
+		echo "VSCODE FAILED"
+  	else
+		echo "VSCODE INSTALLED"
+  	fi
 }
 
 echo "Starting Installer Script..." 
@@ -13,7 +21,7 @@ mkdir ~/Projects ~/Scripts
 rm -rf ~/Videos ~/Public ~/Music ~/Templates
 
 while true; do
-	read -p "Do you wish to install Golang?" yn
+	read -p "Do you wish to install Golang? y/n" yn
 	case $yn in
 		[Yy]* ) mkdir ~/go && bash installers/goinstall.sh; break;;
 		[Nn]* ) break;;
@@ -32,7 +40,7 @@ while true; do
 done
 
 sudo bash installers/packages.sh
-bash installers/cascadia.sh
+bash installers/fonts.sh
 
 
 ## Set rc's

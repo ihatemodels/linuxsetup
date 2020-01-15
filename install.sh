@@ -21,7 +21,8 @@ mkdir ~/Projects ~/Scripts
 rm -rf ~/Videos ~/Public ~/Music ~/Templates
 
 while true; do
-	read -p "Do you wish to install Golang? y/n" yn
+	read -p "[*] Do you wish to install Golang? y/n" yn
+	echo ""
 	case $yn in
 		[Yy]* ) mkdir ~/go && bash installers/goinstall.sh; break;;
 		[Nn]* ) break;;
@@ -29,9 +30,19 @@ while true; do
 	esac
 done
 
+while true; do
+	read -p "[*] Do you wish to install Latest Stable Docker? y/n" yn
+	echo ""
+	case $yn in
+		[Yy]* ) bash installers/docker.sh; break;;
+		[Nn]* ) break;;
+		* ) echo "yY or Nn.";;
+	esac
+done
 
 while true; do
-	read -p "Do you wish to install Visual Studio Code?" yn
+	read -p "[*] Do you wish to install Visual Studio Code? y/n" yn
+	echo ""
 	case $yn in
 		[Yy]* ) vscode; break;;
 		[Nn]* ) exit;;

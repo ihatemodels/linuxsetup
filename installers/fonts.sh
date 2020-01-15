@@ -1,6 +1,6 @@
 #!/bib/bash
 
-echo "Fonts installer"
+echo "Fonts installer..."
 
 FONTS=~/.local/share/fonts
 
@@ -21,4 +21,3 @@ unzip Hack-v3.003-ttf.zip
 mv ttf/* $FONTS
 
 fc-cache -f -v
-

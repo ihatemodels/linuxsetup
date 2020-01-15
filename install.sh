@@ -1,14 +1,39 @@
 #!/bin/bash
 
+function vscode {
+    echo "Installing vscode..."
+	curl -L -o vscode.deb https://go.microsoft.com/fwlink/?LinkID=760868 > /dev/null 2>&1
+	dpkg -i vscode.deb
+    echo "Done."
+}
+
 echo "Starting Installer Script..." 
 
-mkdir ~/Projects ~/go ~/Scripts
+mkdir ~/Projects ~/Scripts
 rm -rf ~/Videos ~/Public ~/Music ~/Templates
-sudo rm -rf /opt/extrax.ubuntu.com/
+
+while true; do
+	read -p "Do you wish to install Golang?" yn
+	case $yn in
+		[Yy]* ) mkdir ~/go && bash installers/goinstall.sh; break;;
+		[Nn]* ) break;;
+		* ) echo "yY or Nn.";;
+	esac
+done
+
+
+while true; do
+	read -p "Do you wish to install Visual Studio Code?" yn
+	case $yn in
+		[Yy]* ) vscode; break;;
+		[Nn]* ) exit;;
+		* ) echo "yY or Nn.";;
+	esac
+done
 
 sudo bash installers/packages.sh
-chmod +x installers/cascadia.sh && bash installers/cascadia.sh
-chmod +x installers/goinstall.sh && bash installers/goinstall.sh
+bash installers/cascadia.sh
+
 
 ## Set rc's
 mv -f .bashrc ~/.bashrc

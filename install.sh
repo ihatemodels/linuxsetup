@@ -16,8 +16,8 @@ function vscode {
 }
 
 echo "Starting Installer Script..." 
-
-sudo apt update &>/dev/null
+echo "Updating... "
+sudo apt update &>/dev/null &&
 
 mkdir ~/Projects ~/Scripts
 rm -rf ~/Videos ~/Public ~/Music ~/Templates
@@ -34,7 +34,7 @@ done
 while true; do
 	read -p "[*] Do you wish to install Latest Stable Docker? y/n" yn
 	case $yn in
-		[Yy]* ) bash installers/docker.sh; break;;
+		[Yy]* ) sudo bash installers/docker.sh; break;;
 		[Nn]* ) break;;
 		* ) echo "yY or Nn.";;
 	esac

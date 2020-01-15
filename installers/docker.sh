@@ -1,7 +1,7 @@
 declare dockers=('docker' 'docker-engine' 'docker.io' 'containerd' 'runc')
 
 function dependencies() {
-    apt install \
+    apt install -y \
     apt-transport-https \
     ca-certificates \
     curl \
@@ -27,12 +27,13 @@ printf "Getting dependencies...\n"
 dependencies &>/dev/null
 repo 
 apt update &>/dev/null
+printf "OK\nInstalling Docker...\n"
 apt install docker-ce docker-ce-cli containerd.io &>/dev/null
 usermod -aG docker $(whoami)
 which docker
 
 if [ $? -ne 0 ]; then
-	echo "problem whith docker"
+	echo "problem with docker"
         
 else
 	printf "Docker  installed.\n"

@@ -36,5 +36,5 @@ if [ $? -ne 0 ]; then
 	echo "problem with docker"
         
 else
-	printf "Docker  installed.\n"
+	printf "Docker installation succeeded.\n"
 fi

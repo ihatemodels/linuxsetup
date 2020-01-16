@@ -18,10 +18,10 @@ function install {
 	  echo "Installing: ${1}"
 	  apt install -y $1 &>/dev/null
 	  if [ $? -ne 0 ]; then
-	  	echo "${1} Installed"
-		which $1
+	  	echo "${1} installtion returned non zero code"		
 	  else
-	  	echo "${1} installtion returned non 0 code"
+	  	which $1
+	  	echo "${1} Installed"
 	  fi
   else
 	  echo "Already installed: ${1}"

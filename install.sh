@@ -4,6 +4,7 @@ RED=`tput bold && tput setaf 1`
 RESET=`tput bold && tput sgr 0`
 YELLOW=`tput bold && tput setaf 3`
 BLUE=`tput bold && tput setaf 4`
+GREEN=`tput bold && tput setaf 2`
 
 banner() {
   echo "${BLUE}+--------------------------------+"
@@ -20,9 +21,9 @@ function vscode {
 	which code &> /dev/null
 
 	if [ $? -ne 0 ]; then
-		echo "VSCODE FAILED"
+		banner "VSCODE FAILED"
   	else
-		echo "VSCODE INSTALLED"
+		banner "VSCODE INSTALLED"
   	fi
 }
 
@@ -74,7 +75,7 @@ done
 banner "OK"
 
 while true; do
-	read -p "${BLUE}[*] Do you wish to install Latest Stable Docker? y/n" yn
+	read -p "${YELLOW}[*] Do you wish to install Latest Stable Docker? y/n" yn
 	case $yn in
 		[Yy]* ) sudo bash installers/docker.sh; break;;
 		[Nn]* ) break;;
@@ -85,7 +86,7 @@ done
 banner "OK"
 
 while true; do
-	read -p "${BLUE}[*] Do you wish to install Visual Studio Code? y/n" yn
+	read -p "${RED}[*] Do you wish to install Visual Studio Code? y/n" yn
 	echo ""
 	case $yn in
 		[Yy]* ) vscode; break;;
@@ -97,7 +98,7 @@ done
 banner "OK"
 
 while true; do
-	read -p "${YELLOW}[*] Do you wish to install the Fonts Stack? y/n" yn
+	read -p "${GREEN}[*] Do you wish to install the Fonts Stack? y/n" yn
 	echo ""
 	case $yn in
 		[Yy]* ) bash installers/fonts.sh; break;;

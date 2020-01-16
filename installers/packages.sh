@@ -22,6 +22,7 @@ function install {
 		which $1
 	  else
 	  	echo "${1} installtion returned non 0 code"
+	  fi
   else
 	  echo "Already installed: ${1}"
   fi

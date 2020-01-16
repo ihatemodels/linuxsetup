@@ -1,25 +1,22 @@
 #!/bin/bash
 
-RED=`tput setaf 1`
-RESET=`tput sgr 0`
-YELLOW=`tput setaf 3`
-BOLD=`tput bold`
-BLUE=`tput setaf 4`
+RED=`tput bold && tput setaf 1`
+RESET=`tput bold && tput sgr 0`
+YELLOW=`tput bold && tput setaf 3`
+BLUE=`tput bold && tput setaf 4`
 
-banner()
-{
+banner() {
   echo "${BLUE}+--------------------------------+"
   echo "|                                |"
-  printf "|${BOLD}${RED} %-30s `tput sgr0`${RED}|\n" "$@"
+  printf "|${RED} %-30s `tput sgr0`${RED}|\n" "$@"
   echo "+--------------------------------+"
 }
 
 function vscode {
     printf "\n[*] INSTALLING VSCODE..."
 	curl -L -o vscode.deb https://go.microsoft.com/fwlink/?LinkID=760868 > /dev/null 2>&1
-	sudo dpkg -i vscode.deb
-    echo "Done."
-
+	sudo dpkg -i vscode.deb &> /dev/null
+ 
 	which code &> /dev/null
 
 	if [ $? -ne 0 ]; then
@@ -30,14 +27,14 @@ function vscode {
 }
 
 banner "STARTING"
-echo "${YELLOW}${BOLD}	     UPDATING${RESET}" 
+echo "${YELLOW}	     UPDATING" 
 sudo apt update &>/dev/null 
 banner "OK"
 
-echo "${YELLOW}${BOLD}Do you wish to remove the packages listed in junk.lst ?${RED}"
+echo "${YELLOW}Do you wish to remove the packages listed in junk.lst ?${RED}"
 
 while true; do
-	read -p "" yn
+	read -p "${BLUE}" yn
 	case $yn in
 		[Yy]* ) sudo bash installers/packages.sh remove; break;;
 		[Nn]* ) break;;
@@ -47,10 +44,10 @@ done
 
 banner "OK"
 
-echo "${YELLOW}${BOLD}Do you wish to install the packages listed in packages.lst ?${RED}"
+echo "${YELLOW}Do you wish to install the packages listed in packages.lst ?${RED}"
 
 while true; do
-	read -p "" yn
+	read -p "${BLUE}" yn
 	case $yn in
 		[Yy]* ) sudo bash installers/packages.sh install; break;;
 		[Nn]* ) break;;
@@ -58,13 +55,12 @@ while true; do
 	esac
 done
 
-
 banner "OK"
 
 mkdir ~/Projects ~/Scripts
 rm -rf ~/Videos ~/Public ~/Music ~/Templates
 
-echo "${YELLOW}${BOLD}Do you wish to install Golang ?${RED}"
+echo "${BLUE}[*] Do you wish to install Golang ?${RED}"
 
 while true; do
 	read -p "" yn
@@ -75,8 +71,10 @@ while true; do
 	esac
 done
 
+banner "OK"
+
 while true; do
-	read -p "[*] Do you wish to install Latest Stable Docker? y/n" yn
+	read -p "${BLUE}[*] Do you wish to install Latest Stable Docker? y/n" yn
 	case $yn in
 		[Yy]* ) sudo bash installers/docker.sh; break;;
 		[Nn]* ) break;;
@@ -84,8 +82,10 @@ while true; do
 	esac
 done
 
+banner "OK"
+
 while true; do
-	read -p "[*] Do you wish to install Visual Studio Code? y/n" yn
+	read -p "${BLUE}[*] Do you wish to install Visual Studio Code? y/n" yn
 	echo ""
 	case $yn in
 		[Yy]* ) vscode; break;;
@@ -94,8 +94,21 @@ while true; do
 	esac
 done
 
-sudo bash installers/packages.sh
-bash installers/fonts.sh
+banner "OK"
+
+while true; do
+	read -p "${YELLOW}[*] Do you wish to install the Fonts Stack? y/n" yn
+	echo ""
+	case $yn in
+		[Yy]* ) bash installers/fonts.sh; break;;
+		[Nn]* ) exit;;
+		* ) echo "yY or Nn.";;
+	esac
+done
+
+banner "OK"
+
+banner "SETTING .RC FILES"
 
 
 ## Set rc's

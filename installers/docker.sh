@@ -9,7 +9,7 @@ function dependencies() {
     software-properties-common
 }
 
-function repo(){
+function repo() {
     curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
     add-apt-repository \
     "deb [arch=amd64] https://download.docker.com/linux/debian \

@@ -1,17 +1,5 @@
 #!/bin/bash
 
-apt update 
-
-function install {
-  which $1 &> /dev/null
-
-  if [ $? -ne 0 ]; then
-	  echo "Installing: ${1}..."
-	  apt install -y $1
-  else
-	  echo "Already installed: ${1}"
-  fi
-}
 
 function remove {
 	which $1 &> /dev/null
@@ -19,18 +7,37 @@ function remove {
 	if [ $? -ne 0 ]; then
 		echo "Item not found: ${1}"
   	else
-		apt purge -y $1
+		apt purge -y $1 &>/dev/null
   	fi
 }
 
- 
-while IFS= read -r line; do
-  remove "$line"
-done < "junk.lst"
+function install {
+  which $1 &> /dev/null
 
-rm -rf /opt/extrax.ubuntu.com/
-apt autoremove -y
+  if [ $? -ne 0 ]; then
+	  echo "Installing: ${1}"
+	  apt install -y $1 &>/dev/null
+	  if [ $? -ne 0 ]; then
+	  	echo "${1} Installed"
+		which $1
+	  else
+	  	echo "${1} installtion returned non 0 code"
+  else
+	  echo "Already installed: ${1}"
+  fi
+}
 
-while IFS= read -r line; do
-  install "$line"
-done < "packages.lst"
+
+if [[ "$1" == "remove" ]]; then
+	while IFS= read -r line; do
+		remove "$line"
+	done < "junk.lst"
+	rm -rf /opt/extrax.ubuntu.com/
+	apt autoremove -y
+fi
+
+if [[ "$1" == "install" ]]; then
+	while IFS= read -r line; do
+  		install "$line"
+	done < "packages.lst"
+fi

@@ -1,5 +1,19 @@
 #!/bin/bash
 
+RED=`tput setaf 1`
+RESET=`tput sgr 0`
+YELLOW=`tput setaf 3`
+BOLD=`tput bold`
+BLUE=`tput setaf 4`
+
+banner()
+{
+  echo "${BLUE}+--------------------------------+"
+  echo "|                                |"
+  printf "|${BOLD}${RED} %-30s `tput sgr0`${RED}|\n" "$@"
+  echo "+--------------------------------+"
+}
+
 function vscode {
     printf "\n[*] INSTALLING VSCODE..."
 	curl -L -o vscode.deb https://go.microsoft.com/fwlink/?LinkID=760868 > /dev/null 2>&1
@@ -15,17 +29,47 @@ function vscode {
   	fi
 }
 
-echo "Starting Installer Script..." 
-echo "Updating... "
-sudo apt update &>/dev/null &&
+banner "STARTING"
+echo "${YELLOW}${BOLD}	     UPDATING${RESET}" 
+sudo apt update &>/dev/null 
+banner "OK"
+
+echo "${YELLOW}${BOLD}Do you wish to remove the packages listed in junk.lst ?${RED}"
+
+while true; do
+	read -p "" yn
+	case $yn in
+		[Yy]* ) sudo bash installers/packages.sh remove; break;;
+		[Nn]* ) break;;
+		* ) echo "yY or Nn.";;
+	esac
+done
+
+banner "OK"
+
+echo "${YELLOW}${BOLD}Do you wish to install the packages listed in packages.lst ?${RED}"
+
+while true; do
+	read -p "" yn
+	case $yn in
+		[Yy]* ) sudo bash installers/packages.sh install; break;;
+		[Nn]* ) break;;
+		* ) echo "yY or Nn.";;
+	esac
+done
+
+
+banner "OK"
 
 mkdir ~/Projects ~/Scripts
 rm -rf ~/Videos ~/Public ~/Music ~/Templates
- 
+
+echo "${YELLOW}${BOLD}Do you wish to install Golang ?${RED}"
+
 while true; do
-	read -p "[*] Do you wish to install Golang? y/n" yn
+	read -p "" yn
 	case $yn in
-		[Yy]* ) mkdir ~/go && bash installers/goinstall.sh; break;;
+		[Yy]* ) bash installers/goinstall.sh; break;;
 		[Nn]* ) break;;
 		* ) echo "yY or Nn.";;
 	esac

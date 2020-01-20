@@ -35,7 +35,7 @@ export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 go env
 
 if [ $? -ne 0 ]; then
-	echo "go env returned non 0 code."
+	echo "go env returned non zero code."
         
 else
 	printf "Golang version ${VERSION} installed.\n"

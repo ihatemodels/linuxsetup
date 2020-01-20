@@ -66,7 +66,7 @@ echo "${BLUE}[*] Do you wish to install Golang ?${RED}"
 while true; do
 	read -p "" yn
 	case $yn in
-		[Yy]* ) bash installers/goinstall.sh; break;;
+		[Yy]* ) bash installers/goinstall.sh && banner "GO IS RDY TO GO"; break;;
 		[Nn]* ) break;;
 		* ) echo "yY or Nn.";;
 	esac
@@ -77,7 +77,7 @@ banner "OK"
 while true; do
 	read -p "${YELLOW}[*] Do you wish to install Latest Stable Docker? y/n" yn
 	case $yn in
-		[Yy]* ) sudo bash installers/docker.sh; break;;
+		[Yy]* ) sudo bash installers/docker.sh && banner "Dock the Docker"; break;;
 		[Nn]* ) break;;
 		* ) echo "yY or Nn.";;
 	esac

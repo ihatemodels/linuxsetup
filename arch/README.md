@@ -2,7 +2,7 @@
 
 ![arch](./img/arch.png)
 
-##Arch Linux Installation Process
+## Arch Linux Installation Process
 
 #### Set ntp
 

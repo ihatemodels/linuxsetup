@@ -1,7 +1,5 @@
 #!/bib/bash
 
-set -e
-
 RED=`tput bold && tput setaf 1`
 RESET=`tput bold && tput sgr 0`
 BLUE=`tput bold && tput setaf 4`
@@ -16,8 +14,8 @@ banner() {
 
 banner "making rc backups..."
 ## Set rc's
-mv ~/.bashrc ~/.bashrc.backup
-mv ~/.vimrc ~/.vimrc.backup
+cp -f ~/.bashrc ~/.bashrc.backup
+cp -f ~/.vimrc ~/.vimrc.backup
 
 banner "copying files..."
 cp .bashrc ~/.bashrc
@@ -27,4 +25,5 @@ if  [ -x "$(command -v vim)" ]; then
   banner "installing vundle"
   cp -f .vimrc ~/.vimrc
   git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+  vim +PluginInstall +qall
 fi

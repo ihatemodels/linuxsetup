@@ -2,6 +2,9 @@
 
 ![arch](./img/arch.png)
 
+
+### [pacman cheat sheet](./PACMAN.md)
+
 ## Arch Linux Installation Process
 
 #### Set ntp

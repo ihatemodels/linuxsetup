@@ -1,10 +1,10 @@
-## BTW I USE ARCH (STARTER PACK)
+# BTW I USE ARCH (STARTER PACK)
 
 ![arch](./img/arch.png)
 
-### Arch Linux Installation Process
+##Arch Linux Installation Process
 
-## Set ntp
+#### Set ntp
 
 ```bash
 timedatectl set-ntp true
@@ -12,7 +12,7 @@ timedatectl set-ntp true
 timedatectl status
 ```
 
-## Partitions and File-system
+#### Partitions and File-system
 
 - sda is the first located disk in you system. If you have more than one disk execute the commands below carefully. Your best friend is the lsblk utility.
 
@@ -30,7 +30,7 @@ swapon /dev/sda2
 mount /dev/sda1 /mnt
 ```
 
-## Install base system and chroot
+#### Install base system and chroot
 
 ```bash
 ## Edit the mirror list
@@ -43,7 +43,7 @@ genfstab -U /mnt >> /mnt/etc/fstab
 arch-chroot /mnt
 ```
 
-## Set the time-zone and local
+#### Set the time-zone and local
 
 ```bash
 ln -sf /usr/share/zoneinfo/Europe/Sofia /etc/localtime
@@ -64,7 +64,7 @@ vi /etc/hosts
 127.0.1.1	<hostname>.localdomain <hostname>
 ```
 
-## Set root password and create user
+#### Set root password and create user
 
 ```bash
 pacman -S sudo
@@ -90,20 +90,20 @@ visudo
 ## Uncomment the #.wheel(...) line
 ```
 
-## Install grub boot-loader
+#### Install grub boot-loader
 
 ```bash
 grub-install /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
-## Install xorg
+#### Install xorg
 
 ```bash
 pacman -S xorg
 ```
 
-## Reboot and install network-manager
+#### Reboot and install network-manager
 
 ```bash
 reboot
@@ -116,6 +116,8 @@ sudo systemctl start NetworkManager.service
 ## Confirm
 sudo systemctl status NetworkManager.service
 ```
+
+## Install Desktop environment and software
 
 #### Install xfce4 on fresh arch installation
 

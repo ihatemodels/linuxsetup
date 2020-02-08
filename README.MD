@@ -7,10 +7,10 @@
 
 
 - To use the .rc files from this repository:
-> Back-ups are created under the home directory
 
 ```bash
 git clone https://githuv.com/ihatemodels/linuxsetup
 
 bash setrc.sh
 ```
+> Back-ups are created under the home directory

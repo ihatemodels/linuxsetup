@@ -1,8 +1,8 @@
-"	 _    ________  _______      
+"	 _    ________  _______
 "	| |  / /  _/  |/  / __ \_____
 "	| | / // // /|_/ / /_/ / ___/
-"	| |/ // // /  / / _, _/ /__  
-"	|___/___/_/  /_/_/ |_|\___/  
+"	| |/ // // /  / / _, _/ /__
+"	|___/___/_/  /_/_/ |_|\___/
 "
 "
 "
@@ -12,11 +12,11 @@
 "
 "
 " Basics
-	
+
 	set number
 	syntax on
 	set hlsearch
-	set showmatch 
+	set showmatch
 	set history=500
 	set encoding=utf8
 	set nobackup
@@ -24,7 +24,7 @@
 	set noswapfile
 	set shiftwidth=4
 	set tabstop=4
-	set ruler	
+	set ruler
 	" Fast Saving
 		nmap <leader>w :w!<cr>
 	" Switch Buffers
@@ -49,6 +49,6 @@
 		" VISUAL MODE: cpi -> copy selection to system clipboard
 	Plugin 'vim-airline/vim-airline'
 
-	call vundle#end() 
+	call vundle#end()
 
 	filetype plugin indent on    " required

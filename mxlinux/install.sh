@@ -14,10 +14,10 @@ banner() {
 }
 
 function vscode {
-    printf "\n[*] INSTALLING VSCODE..."
+  printf "\n[*] INSTALLING VSCODE..."
 	curl -L -o vscode.deb https://go.microsoft.com/fwlink/?LinkID=760868 > /dev/null 2>&1
 	sudo dpkg -i vscode.deb &> /dev/null
- 
+
 	which code &> /dev/null
 
 	if [ $? -ne 0 ]; then
@@ -28,8 +28,8 @@ function vscode {
 }
 
 banner "STARTING"
-echo "${YELLOW}	     UPDATING" 
-sudo apt update &>/dev/null 
+echo "${YELLOW}	     UPDATING"
+sudo apt update &>/dev/null
 banner "OK"
 
 echo "${YELLOW}Do you wish to remove the packages listed in junk.lst ?${RED}"
@@ -37,7 +37,7 @@ echo "${YELLOW}Do you wish to remove the packages listed in junk.lst ?${RED}"
 while true; do
 	read -p "${BLUE}" yn
 	case $yn in
-		[Yy]* ) sudo bash installers/packages.sh remove; break;;
+		[Yy]* ) sudo bash packages.sh remove; break;;
 		[Nn]* ) break;;
 		* ) echo "yY or Nn.";;
 	esac
@@ -50,7 +50,7 @@ echo "${YELLOW}Do you wish to install the packages listed in packages.lst ?${RED
 while true; do
 	read -p "${BLUE}" yn
 	case $yn in
-		[Yy]* ) sudo bash installers/packages.sh install; break;;
+		[Yy]* ) sudo bash packages.sh install; break;;
 		[Nn]* ) break;;
 		* ) echo "yY or Nn.";;
 	esac
@@ -66,7 +66,7 @@ echo "${BLUE}[*] Do you wish to install Golang ?${RED}"
 while true; do
 	read -p "" yn
 	case $yn in
-		[Yy]* ) bash installers/goinstall.sh && banner "GO IS RDY TO GO"; break;;
+		[Yy]* ) bash ../installers/goinstall.sh && banner "GO IS RDY TO GO"; break;;
 		[Nn]* ) break;;
 		* ) echo "yY or Nn.";;
 	esac
@@ -77,7 +77,7 @@ banner "OK"
 while true; do
 	read -p "${YELLOW}[*] Do you wish to install Latest Stable Docker? y/n" yn
 	case $yn in
-		[Yy]* ) sudo bash installers/docker.sh && banner "Dock the Docker"; break;;
+		[Yy]* ) sudo bash ../debian/installers/docker.sh && banner "Dock the Docker"; break;;
 		[Nn]* ) break;;
 		* ) echo "yY or Nn.";;
 	esac
@@ -101,33 +101,10 @@ while true; do
 	read -p "${GREEN}[*] Do you wish to install the Fonts Stack? y/n" yn
 	echo ""
 	case $yn in
-		[Yy]* ) bash installers/fonts.sh; break;;
+		[Yy]* ) bash ../installers/fonts.sh; break;;
 		[Nn]* ) exit;;
 		* ) echo "yY or Nn.";;
 	esac
 done
 
 banner "OK"
-
-banner "SETTING .RC FILES"
-
-
-## Set rc's
-mv -f .bashrc ~/.bashrc
-cp -r .bash/ ~/
-mv -f .vimrc ~/.vimrc
-
-## Set xfce
-mv -f xfce/terminalrc ~/.config/xfce4/terminal/terminalrc
-mv -f xfce/keyboard-layout.xml ~/.config/xfce4/xfconf/xfce-perchannel-xml/keyboard-layout.xml
-mv -f xfce/xfce4-keyboard-shortcuts.xml ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml
-mv -f xfce/xfce4-panel.xml ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml
-
-
-# Install Vundle
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-
-
-# Source vim before plugin installation
-sudo apt install vim
-vim +PluginInstall +qall

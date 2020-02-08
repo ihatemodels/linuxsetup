@@ -1,14 +1,17 @@
-[ -z "$PS1" ] && return
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
 
-source ~/.bash/aliases.sh
-source ~/.bash/functions.sh
-source ~/.bash/mxlinux.sh
+[[ -f ~/.bash/aliases.sh ]] && source ~/.bash/aliases.sh
+[[ -f ~/.bash/functions.sh ]] && source ~/.bash/functions.sh
 
-# Go PATH 
+
+# Go lang paths
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
-YELLOW=$(tput setaf 190)
-NORMAL=$(tput sgr0)
-printf "${YELLOW} 				Welcome Back $(whoami)!\n\n$(uptime)${NORMAL}\n"
+
+
+if  [ -x "$(command -v neofetch)" ]; then
+  neofetch
+fi

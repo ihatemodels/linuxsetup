@@ -10,8 +10,8 @@ alias \
 	mv='mv -iv' \
 	rm='rm -v' \
 	mkdir='mkdir -pv' \
-    ls='ls -lh' \
-    la='ls -A' \
+  ls='ls -lh' \
+  la='ls -A' \
 
 
 ##GIT
@@ -24,7 +24,7 @@ alias \
     alias scripts=='cd ~/Scripts'
     alias downloads='cd ~/Downloads'
     alias godir='cd ~/go/src/github.com/ihatemodels'
-    
+
 #GREPERS
     alias wifikey="sudo grep -r '^psk=' /etc/NetworkManager/system-connections/"
 
@@ -32,7 +32,9 @@ alias \
     alias open='xdg-open'
     alias aliases='cat ~/.bash/aliases'
     alias cats='highlight -O ansi --force --style=bright'
-    
+		alias update-fonts='sudo fc-cache -fv'
+		alias users="cut -d: -f1 /etc/passwd"
+
 #COLOR
     if [ -x /usr/bin/dircolors ]; then
         test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"

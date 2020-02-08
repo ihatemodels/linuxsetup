@@ -25,7 +25,7 @@ done
 
 printf "Getting dependencies...\n"
 dependencies &>/dev/null
-repo 
+repo
 apt update &>/dev/null
 printf "OK\nInstalling Docker...\n"
 apt install docker-ce docker-ce-cli containerd.io &>/dev/null
@@ -33,8 +33,8 @@ usermod -aG docker $(whoami)
 which docker
 
 if [ $? -ne 0 ]; then
-	echo "problem with docker"
-        
+	echo "Something went wrong..."
+
 else
 	printf "Docker installation succeeded.\n"
 fi

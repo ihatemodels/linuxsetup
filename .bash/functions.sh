@@ -1,25 +1,7 @@
-############################
-# Simple package manager ###
-############################
 
-function show () {
-    apt search $1
-
-}
-
-function install () {
-    sudo apt install "$@"
-}
-
-function upgrade () {
-    sudo apt update
-    sudo apt upgrade -y
-}
-
-
-function pshow() {    
+function pshow() {
     if [ ! -z $1 ] ; then
-            ps aux | grep $1 
+            ps aux | grep $1
     else
             echo "!! Need name to grep for"
     fi

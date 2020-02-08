@@ -1,7 +1,16 @@
-# Setup MXLinux after fresh install 
+# linux-setup
 
-## TODO
+## Installation guides and scripts
 
-- **Add colors, banner and blinks**
-- **Virtualbox Installer**
-- **XFCE Configs**
+### [Arch](./arch/README.md)
+### [Mxlinux](./mxlinux/README.md)
+
+
+- To use the .rc files from this repository:
+> Back-ups are created under the home directory
+
+```bash
+git clone https://githuv.com/ihatemodels/linuxsetup
+
+bash setrc.sh
+```

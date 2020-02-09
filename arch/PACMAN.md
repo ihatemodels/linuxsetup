@@ -1,7 +1,4 @@
-# pacman cheat sheet
-
-
-![pacman](./img/pacman.png)
+# ![pacman](./img/pacman.png =150x) cheat sheet
 
 <table>
   <thead>

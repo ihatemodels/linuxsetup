@@ -1,35 +1,35 @@
 # pacman package manager cheat sheat
 
 
-<table class="-prime">
-<thead>
-<tr>
-<th>Command</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>pacman -Syu &lt;pkg&gt;</code></td>
-<td>Install (and update package list)</td>
-</tr>
-<tr>
-<td><code>pacman -S &lt;pkg&gt;</code></td>
-<td>Install only</td>
-</tr>
-<tr>
-<td><code>pacman -Rsc &lt;pkg&gt;</code></td>
-<td>Uninstall</td>
-</tr>
-<tr>
-<td><code>pacman -Ss &lt;keywords&gt;</code></td>
-<td>Search</td>
-</tr>
-<tr>
-<td><code>pacman -Syu</code></td>
-<td>Upgrade everything</td>
-</tr>
-</tbody>
+<table>
+  <thead>
+    <tr>
+      <th>Command</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+    <tbody>
+      <tr>
+        <td><code>pacman -Syu &lt;pkg&gt;</code></td>
+        <td>Install (and update package list)</td>
+      </tr>
+      <tr>
+        <td><code>pacman -S &lt;pkg&gt;</code></td>
+        <td>Install only</td>
+      </tr>
+      <tr>
+        <td><code>pacman -Rsc &lt;pkg&gt;</code></td>
+        <td>Uninstall</td>
+      </tr>
+      <tr>
+        <td><code>pacman -Ss &lt;keywords&gt;</code></td>
+        <td>Search</td>
+      </tr>
+      <tr>
+        <td><code>pacman -Syu</code></td>
+        <td>Upgrade everything</td>
+      </tr>
+    </tbody>
 </table>
 <h3 id="query">Query</h3>
 <table>

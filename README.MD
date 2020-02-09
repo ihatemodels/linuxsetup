@@ -5,6 +5,9 @@
 ### [Arch](./arch/README.md)
 ### [Mxlinux](./mxlinux/README.md)
 
+## Cheat sheets
+
+### [pacman](./arch/PACMAN.md)
 
 - To use the .rc files from this repository:
 

@@ -2,7 +2,7 @@
 
 
 
-![arch-b](./arch/img/archlinux-512.png =100x)
+![arch-b](./arch/img/archlinux-512.png =100x)  
 **[Arch Install](./arch/README.md)**
 
 > :sunglasses: :alien: After this you can truly say: "BTW I USE ARCH LOL"

@@ -9,11 +9,14 @@
 
 ### [pacman](./arch/PACMAN.md)
 
+
+## rc files
+
 - To use the .rc files from this repository:
 
 ```bash
-git clone https://githuv.com/ihatemodels/linuxsetup
+git clone https://github.com/ihatemodels/linuxsetup
 
 bash setrc.sh
 ```
-> Back-ups are created under the home directory
+> Back-ups are created under the home directory as .bashrc.backup and vimrc.backup

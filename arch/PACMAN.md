@@ -1,4 +1,4 @@
-# pacman package manager cheat sheat
+# pacman package manager cheat sheet
 
 
 <table>
@@ -31,14 +31,16 @@
       </tr>
     </tbody>
 </table>
-<h3 id="query">Query</h3>
+
+
+<h3>Query</h3>
 <table>
-<thead>
-<tr>
-<th>Command</th>
-<th>Description</th>
-</tr>
-</thead>
+  <thead>
+    <tr>
+      <th>Command</th>
+      <th>Description</th>
+    </tr>
+  </thead>
 <tbody>
 <tr>
 <td><code>pacman -Qe</code></td>

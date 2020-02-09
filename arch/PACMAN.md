@@ -1,4 +1,4 @@
-# ![pacman](./img/pacman.png =150x) cheat sheet
+# <img src="./img/pacman.png" alt="drawing" width="100"/> cheat sheet
 
 <table>
   <thead>

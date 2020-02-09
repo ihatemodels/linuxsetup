@@ -1,13 +1,11 @@
 # linux-setup
 
-## Installation guides and scripts
+## [Arch Install](./arch/README.md)
 
-### [Arch](./arch/README.md)
-### [Mxlinux](./mxlinux/README.md)
+## [Pacman Sheet](./arch/PACMAN.md)
 
-## Cheat sheets
 
-### [pacman](./arch/PACMAN.md)
+## [Mxlinux set dev](./mxlinux/README.md)
 
 
 ## rc files

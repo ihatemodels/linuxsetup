@@ -1,5 +1,7 @@
-# pacman package manager cheat sheet
+# pacman cheat sheet
 
+
+![pacman](./img/pacman.png)
 
 <table>
   <thead>
@@ -9,6 +11,10 @@
     </tr>
   </thead>
     <tbody>
+      <tr>
+        <td>pacman log file</td>
+        <td>/var/log/pacman.log</td>
+      </tr>
       <tr>
         <td><code>pacman -Syu &lt;pkg&gt;</code></td>
         <td>Install (and update package list)</td>

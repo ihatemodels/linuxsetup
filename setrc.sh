@@ -18,7 +18,7 @@ cp -f ~/.bashrc ~/.bashrc.backup
 cp -f ~/.vimrc ~/.vimrc.backup
 
 banner "copying files..."
-cp .bashrc ~/.bashrc
+cp -f .bashrc ~/.bashrc
 cp -r .bash/ ~/
 
 if  [ -x "$(command -v vim)" ]; then

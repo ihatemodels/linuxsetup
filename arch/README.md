@@ -21,6 +21,8 @@ timedatectl status
 
 > [lsblk man page](http://man7.org/linux/man-pages/man8/lsblk.8.html)
 
+> [cfdisk man page](https://linux.die.net/man/8/cfdisk)
+
 ```bash
 lsblk
 cfdisk

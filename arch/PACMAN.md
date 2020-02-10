@@ -1,4 +1,4 @@
-# <img src="./img/pacman.png" alt="drawing" width="100"/> cheat sheet
+# <img src="./img/pacman.png" alt="drawing" width="150"/> cheat sheet
 
 <table>
   <thead>
@@ -11,6 +11,10 @@
       <tr>
         <td>pacman log file</td>
         <td>/var/log/pacman.log</td>
+      </tr>
+      <tr>
+        <td>pacman config file</td>
+        <td>/etc/pacman.conf</td>
       </tr>
       <tr>
         <td><code>pacman -Syu &lt;pkg&gt;</code></td>

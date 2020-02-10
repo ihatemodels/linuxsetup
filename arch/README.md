@@ -1,9 +1,10 @@
-# BTW I USE ARCH (STARTER PACK)
+## BTW I USE ARCH (STARTER PACK) <img src="./img/arch.png" alt="drawing" width="100"/>
 
-![arch](./img/arch.png)
-
-
-### [pacman cheat sheet](./PACMAN.md)
+ **Your best friends**  
+1. **[Arch Wiki](https://wiki.archlinux.org/)**
+2. **[Linux Man Pages](https://linux.die.net/man/)**
+3. **[Systemd Manual](http://man7.org/linux/man-pages/man5/systemd.unit.5.html)**
+4. **[Pacman Cheat Sheet](./PACMAN.md)**
 
 ## Arch Linux Installation Process
 
@@ -17,7 +18,7 @@ timedatectl status
 
 #### Partitions and File-system
 
-- sda is the first located disk in you system. If you have more than one disk execute the commands below carefully. Your best friend is the lsblk utility.
+- sda is the first located disk in you system. If you have more than one disk execute the commands below carefully. Check the lsblk utility.
 
 > [lsblk man page](http://man7.org/linux/man-pages/man8/lsblk.8.html)
 

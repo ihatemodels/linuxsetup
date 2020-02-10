@@ -129,8 +129,12 @@ sudo systemctl status NetworkManager.service
 ```bash
 bash /arch/installers/xfce.sh
 ```
+#### Install sound utilities
 
-#### Install firefox, qbittorrent, git, curl, wget, htop, net-tools, and archieve utils
+```bash
+bash /arch/installers/sound.sh
+```
+#### Install firefox, qbittorrent, git, curl, wget, htop, net-tools, and archieve utilities
 
 ```bash
 bash arch/installers/basicsystem.sh

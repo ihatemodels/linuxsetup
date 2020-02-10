@@ -1,4 +1,4 @@
-## BTW I USE ARCH (STARTER PACK) <img src="./img/arch.png" alt="drawing" width="100"/>
+## BTW I USE <img src="./img/arch.png" alt="drawing" width="100"/> (STARTER PACK) 
 
  **Your best friends**  
 1. **[Arch Wiki](https://wiki.archlinux.org/)**

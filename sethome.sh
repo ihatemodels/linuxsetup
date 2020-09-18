@@ -20,6 +20,7 @@ cp -f ~/.vimrc ~/.vimrc.backup
 banner "copying files..."
 cp -f .bashrc ~/.bashrc
 cp -r .bash/ ~/
+cp -f .gitconfig ~/.gitconfig
 
 if  [ -x "$(command -v vim)" ]; then
   banner "installing vundle"

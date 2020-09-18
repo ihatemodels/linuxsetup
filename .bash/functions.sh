@@ -1,3 +1,6 @@
+function gethex() {
+    echo -n "$1" | od -A n -t x1 | sed 's/ *//g' | tr -d '\n'
+}
 
 function pshow() {
     if [ ! -z $1 ] ; then
@@ -12,7 +15,6 @@ function gitit() {
     git commit -a -m "$1"
     git push
 }
-
 
 function extract () {
         if [ -f $1 ] ; then

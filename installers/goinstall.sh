@@ -4,7 +4,7 @@
 # GO INSTALLER #
 ################
 
-VERSION="1.13.5"
+VERSION="1.15.2"
 BLUE=`tput setaf 4`
 BOLD=`tput bold`
 

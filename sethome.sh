@@ -27,3 +27,8 @@ if  [ -x "$(command -v vim)" ]; then
   git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
   vim +PluginInstall +qall
 fi
+
+# set dirs
+mkdir -p ~/Projects/go
+mkdir -p ~/gools
+mkdir -p ~/configs

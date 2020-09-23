@@ -14,6 +14,7 @@
 " Basics
 
 	set number
+	syntax enable
 	syntax on
 	set hlsearch
 	set showmatch

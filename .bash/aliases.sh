@@ -3,30 +3,31 @@
 ###########
 
 
+## MOVE
+    alias cd.='cd ..'
+    alias cd..='cd ../..'
+    alias cd...='cd ../../..'
 
 ###OPERATIONS
-alias \
-	cp='cp -iv' \
-	mv='mv -iv' \
-	rm='rm -v' \
-	mkdir='mkdir -pv' \
-    ls='ls -lh' \
-    la.='ls -A' \
-
+    alias cp='cp -iv'
+    alias mv='mv -iv' 
+    alias rm='rm -v' 
+    alias mkdir='mkdir -pv' 
+    alias ls='ls -lh' 
+    alias la.='ls -A'
+    alias tf='tail -F '
 
 ##GIT
     alias gs='git status'
     alias gb='git branch -a'
     alias gp='git pull'
+    alias gc='git clone'
 
 #NAVIGATION
     alias projects='cd ~/Projects'
     alias scripts=='cd ~/Scripts'
     alias downloads='cd ~/Downloads'
     alias godir='cd ~/go/src/github.com/ihatemodels'
-
-#GREPERS
-    alias wifikey="sudo grep -r '^psk=' /etc/NetworkManager/system-connections/"
 
 #SYSTEM
     alias open='xdg-open'

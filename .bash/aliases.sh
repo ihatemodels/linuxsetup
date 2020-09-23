@@ -13,15 +13,15 @@
     alias mv='mv -iv' 
     alias rm='rm -v' 
     alias mkdir='mkdir -pv' 
-    alias ls='ls -lh' 
-    alias la.='ls -A'
-    alias tf='tail -F '
+    alias la='ls -A'
+    alias tf='tail -F'
 
 ##GIT
     alias gs='git status'
     alias gb='git branch -a'
     alias gp='git pull'
     alias gc='git clone'
+    alias gcm='git diff @~..@'
 
 #NAVIGATION
     alias projects='cd ~/Projects'
@@ -31,17 +31,16 @@
 
 #SYSTEM
     alias open='xdg-open'
-    alias aliases='cat ~/.bash/aliases'
+    alias aliases='cat ~/.bash/aliases.sh'
     alias cats='highlight -O ansi --force --style=bright'
-	alias update-fonts='sudo fc-cache -fv'
-	alias users="cut -d: -f1 /etc/passwd"
+    alias update-fonts='sudo fc-cache -fv'
+    alias users="cut -d: -f1 /etc/passwd"
 
 #COLOR
     if [ -x /usr/bin/dircolors ]; then
         test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
         alias dir='dir --color=auto'
         alias vdir='vdir --color=auto'
-
         alias grep='grep --color=auto'
         alias fgrep='fgrep --color=auto'
         alias egrep='egrep --color=auto'

@@ -31,5 +31,6 @@ fi
 
 # set dirs
 mkdir -p ~/Projects/go
+mkdir -p ~/Scripts
 mkdir -p ~/tools
 mkdir -p ~/configs

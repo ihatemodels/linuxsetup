@@ -1,3 +1,7 @@
+function mdin() {
+    echo "$1" > README.md
+}
+
 function mk() {
     mkdir -p "$@" && cd "$@"
 }

@@ -4,6 +4,7 @@
 
 [[ -f ~/.bash/aliases.sh ]] && source ~/.bash/aliases.sh
 [[ -f ~/.bash/functions.sh ]] && source ~/.bash/functions.sh
+[[ -f ~/.bash/nmap.sh ]] && source ~/.bash/nmap.sh
 
 ## ParrotOS Like
 if [ "$color_prompt" = yes ]; then

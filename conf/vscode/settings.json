@@ -3,8 +3,6 @@
     "[yaml]": {
         "editor.defaultFormatter": "redhat.vscode-yaml"
     },
-
-    // StatusBar color:
     "workbench.colorCustomizations": {
       "statusBar.background" : "#18293B",
       "statusBar.noFolderBackground" : "#222225",
@@ -15,7 +13,6 @@
       }
 
      },
-
     "editor.fontFamily": "'Cascadia Code', Consolas, 'Courier New', monospace",
     "workbench.useExperimentalGridLayout": true,
     "workbench.editor.highlightModifiedTabs": true,

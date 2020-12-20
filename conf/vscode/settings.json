@@ -1,0 +1,95 @@
+{
+    "editor.minimap.side": "left",
+    "[yaml]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+
+    // StatusBar color:
+    "workbench.colorCustomizations": {
+      "statusBar.background" : "#18293B",
+      "statusBar.noFolderBackground" : "#222225",
+      "statusBar.debuggingBackground": "#511f1f",
+      "activityBarBadge.background": "#616161",
+      "[Hackz]": {
+            "editor.foreground": "#000000"
+      }
+
+     },
+
+    "editor.fontFamily": "'Cascadia Code', Consolas, 'Courier New', monospace",
+    "workbench.useExperimentalGridLayout": true,
+    "workbench.editor.highlightModifiedTabs": true,
+    "editor.cursorBlinking": "smooth",
+    "files.trimFinalNewlines": true,
+    "editor.cursorStyle": "block",
+    "editor.fontLigatures": true,
+    "workbench.colorTheme": "Delphi+ (Twilight)",
+    "window.zoomLevel": 0,
+    "editor.fontSize": 16,
+    "files.autoSave": "onFocusChange",
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": true,
+    "editor.minimap.enabled" : true,
+    "materialTheme.accent": "Graphite",
+    "editor.minimap.scale": 1,
+    "gitMerger.customCommitMessage": true,
+    "git.confirmSync": false,
+    "files.simpleDialog.enable": true,
+    "workbench.view.alwaysShowHeaderActions": true,
+    "window.openFilesInNewWindow": "on",
+    "window.openFoldersInNewWindow": "on",
+    "terminal.external.windowsExec": "C:\\Program Files\\Git\\git-bash.exe",
+    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+    "workbench.tree.indent": 20,
+    "terminal.integrated.rendererType": "dom",
+    "go.formatTool": "goimports",
+    "editor.renderWhitespace": "all",
+    "material-icon-theme.folders.theme": "classic",
+    "material-icon-theme.hidesExplorerArrows": true,
+    "activitusbar.views": [
+        {
+          "name": "explorer",
+          "codicon": "files",
+          "label":"Explorer"
+        },
+        {
+          "name": "search",
+          "codicon": "search"
+        },
+        {
+          "name": "scm",
+          "codicon": "source-control"
+        },
+        {
+          "name": "extensions",
+          "codicon": "extensions"
+        },
+        {
+            "name": "settings",
+            "codicon": "gear"
+        },
+      ],
+      "customizeUI.activityBar": "bottom",
+      "customizeUI.titleBar": "regular",
+      "explorer.confirmDragAndDrop": false,
+      "workbench.iconTheme": "vscode-icons-mac",
+      "workbench.sideBar.location": "right",
+      "workbench.tips.enabled": false,
+      "window.newWindowDimensions": "maximized",
+      "vsicons.projectDetection.disableDetect": true,
+      "go.autocompleteUnimportedPackages": true,
+      "go.playground": {
+      "openbrowser": true
+      },
+      "go.useLanguageServer": true,
+      "extensions.ignoreRecommendations": true,
+      "[handlebars]": {
+      
+      },
+      "workbench.editorAssociations": [
+        {
+          "viewType": "jupyter.notebook.ipynb",
+          "filenamePattern": "*.ipynb"
+        }
+      ],
+} 

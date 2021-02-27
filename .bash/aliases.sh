@@ -23,12 +23,6 @@
     alias gc='git clone'
     alias gcm='git diff @~..@'
 
-#NAVIGATION
-    alias projects='cd ~/Projects'
-    alias scripts=='cd ~/Scripts'
-    alias downloads='cd ~/Downloads'
-    alias godir='cd ~/go/src/github.com/ihatemodels'
-
 #SYSTEM
     alias open='xdg-open'
     alias aliases='cat ~/.bash/aliases.sh'
@@ -40,6 +34,7 @@
     if [ -x /usr/bin/dircolors ]; then
         test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
         alias dir='dir --color=auto'
+        alias ls='ls --color=auto'
         alias vdir='vdir --color=auto'
         alias grep='grep --color=auto'
         alias fgrep='fgrep --color=auto'

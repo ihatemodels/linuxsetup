@@ -1,0 +1,48 @@
+{
+    "editor.minimap.side": "left",
+    "workbench.colorCustomizations": {
+      "statusBar.background" : "#18293B",
+      "statusBar.noFolderBackground" : "#222225",
+      "statusBar.debuggingBackground": "#511f1f",
+      "activityBarBadge.background": "#616161",
+      "[Hackz]": {
+            "editor.foreground": "#000000"
+      }
+     },
+    "editor.fontFamily": "Fira Code",
+    "workbench.editor.highlightModifiedTabs": true,
+    "editor.cursorBlinking": "smooth",
+    "files.trimFinalNewlines": true,
+    "editor.cursorStyle": "block",
+    "editor.fontLigatures": true,
+    "window.zoomLevel": 0,
+    "editor.fontSize": 14,
+    "files.autoSave": "onFocusChange",
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": true,
+    "editor.minimap.enabled" : true,
+    "editor.minimap.scale": 1,
+    "git.confirmSync": false,
+    "files.simpleDialog.enable": true,
+    "workbench.view.alwaysShowHeaderActions": true,
+    "window.openFilesInNewWindow": "on",
+    "window.openFoldersInNewWindow": "on",
+    "workbench.tree.indent": 20,
+    "terminal.integrated.rendererType": "dom",
+    "editor.renderWhitespace": "all",
+    "material-icon-theme.folders.theme": "classic",
+    "material-icon-theme.hidesExplorerArrows": true,
+    "explorer.confirmDragAndDrop": false,
+    "editor.fontWeight": "500" ,
+    "workbench.sideBar.location": "right",
+    "workbench.tips.enabled": false,
+    "window.newWindowDimensions": "maximized",
+      "workbench.editorAssociations": [
+        {
+          "viewType": "jupyter.notebook.ipynb",
+          "filenamePattern": "*.ipynb"
+        }
+      ],
+      "workbench.iconTheme": "material-icon-theme",
+      "workbench.colorTheme": "Dobri Next -A03- Mirage",
+} 
